@@ -36,11 +36,24 @@ namespace ApiMiniProject.WeatherService
         public bool HumidCheck() 
         {
             var humidity = currentWeathertDTO.CurrentWeather.main.humidity;
-            if (humidity <= 100)
+            if (humidity <= 100.0f)
             {
                 return true;
             }
             else
+            {
+                return false;
+            }
+        }
+
+        public bool WindSpeedCheck() 
+        {
+            var windSpeed = currentWeathertDTO.CurrentWeather.wind.speed;
+            if (windSpeed <= 100.0f)
+            {
+                return true;
+            }
+            else 
             {
                 return false;
             }

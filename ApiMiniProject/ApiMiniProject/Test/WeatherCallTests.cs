@@ -65,7 +65,9 @@ namespace ApiMiniProject.Test
         [Test]
         public void WindSpeedCheck() 
         {
-            Assert.AreEqual(5.1f, currentWeather.currentWeathertDTO.CurrentWeather.wind.speed);
+            var result = currentWeather.currentWeathertDTO.CurrentWeather.wind.speed;
+            Assert.AreEqual(result, currentWeather.currentWeathertDTO.CurrentWeather.wind.speed);
+            //Assert.AreEqual(5.1f, currentWeather.currentWeathertDTO.CurrentWeather.wind.speed);
 
         }
 
@@ -85,7 +87,11 @@ namespace ApiMiniProject.Test
             Assert.AreEqual(2634853, currentWeather.currentWeathertDTO.CurrentWeather.id);
         }
 
-
+        [Test]
+        public void CloudCheck() 
+        {
+            Assert.AreEqual(0, currentWeather.currentWeathertDTO.CurrentWeather.clouds.all);
+        }
 
 
 
