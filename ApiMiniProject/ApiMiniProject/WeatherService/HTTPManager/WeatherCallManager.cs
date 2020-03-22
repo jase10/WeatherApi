@@ -37,6 +37,8 @@ namespace ApiMiniProject.HTTPManager
             return response.Content;
         }
 
+      
+
 
     }
 }

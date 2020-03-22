@@ -36,7 +36,11 @@ namespace ApiMiniProject.Test
         [Test]
         public void HumidtyCheck() 
         {
+            //CurrentWeatherService cws = new CurrentWeatherService();
+            //var result = cws.HumidCheck();
+            //Assert.AreEqual(true, result);
             Assert.AreEqual(53, currentWeather.currentWeathertDTO.CurrentWeather.main.humidity);
+
         }
 
         [Test]
@@ -60,7 +64,7 @@ namespace ApiMiniProject.Test
         [Test]
         public void WindSpeedCheck() 
         {
-            Assert.AreEqual(4.6f, currentWeather.currentWeathertDTO.CurrentWeather.wind.speed);
+            Assert.AreEqual(5.1f, currentWeather.currentWeathertDTO.CurrentWeather.wind.speed);
 
         }
 
