@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace ApiMiniProject.WeatherService
 { 
-    public class WeatherService
+    public class CurrentWeatherService
     {
         // Our instance of the call manager that manages the call to the API to get the data
         public WeatherCallManager weatherCallManager = new WeatherCallManager();
@@ -24,12 +24,13 @@ namespace ApiMiniProject.WeatherService
         // Weather converted to JObject so we manipulate later in useful methods
         public JObject json_weather;
 
-        public WeatherService()
+        public CurrentWeatherService()
         {
             currentCity = weatherCallManager.GetCurrentWeather();
-            currentWeathertDTO.DeserializeLatestRates(currentCity);
+            currentWeathertDTO.DeserializeWeather(currentCity);
             json_weather = JsonConvert.DeserializeObject<JObject>(currentCity);
         }
+        
     }
 
 

@@ -11,12 +11,12 @@ namespace ApiMiniProject.WeatherService.DataHandling
     {
 
         // The class is the model of data.
-        public CurrentWeatherRoot CurrentWeather { get; set; }
+        public WeatherServiceRoot CurrentWeather { get; set; }
 
         // Method that creates the above object following passing in the response from the API
-        public void DeserializeLatestRates(string LatestRatesResponse)
+        public void DeserializeWeather(string CurrentWeatherResponse)
         {
-            CurrentWeather = JsonConvert.DeserializeObject<CurrentWeatherRoot>(LatestRatesResponse);
+            CurrentWeather = JsonConvert.DeserializeObject<WeatherServiceRoot>(CurrentWeatherResponse);
         }
     }
 }
