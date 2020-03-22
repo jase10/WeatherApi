@@ -36,10 +36,11 @@ namespace ApiMiniProject.Test
         [Test]
         public void HumidtyCheck() 
         {
-            //CurrentWeatherService cws = new CurrentWeatherService();
-            //var result = cws.HumidCheck();
+            CurrentWeatherService cws = new CurrentWeatherService();
+            var result = cws.HumidCheck();
             //Assert.AreEqual(true, result);
-            Assert.AreEqual(53, currentWeather.currentWeathertDTO.CurrentWeather.main.humidity);
+            //Assert.AreEqual(53, currentWeather.currentWeathertDTO.CurrentWeather.main.humidity);
+            Assert.That(result);
 
         }
 
