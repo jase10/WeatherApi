@@ -31,6 +31,8 @@ namespace ApiMiniProject.WeatherService
             json_weather = JsonConvert.DeserializeObject<JObject>(currentCity);
         }
 
+       
+
         public bool HumidCheck() 
         {
             var humidity = currentWeathertDTO.CurrentWeather.main.humidity;
